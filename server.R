@@ -1,19 +1,16 @@
 
-library(shiny)
+
 library(datasets)
 library(forecast)
 
 shinyServer(function(input, output) {
   
   getDataset <- reactive({
-    if (input$variable=="AirPassengers")
-    {
-      return(AirPassengers)
-    }
-    else if (input$variable=="gas")
+    if (input$select=="gas")
     {
       return(gas)
     }
+    
     else
     {
       return(wineind)
@@ -21,7 +18,7 @@ shinyServer(function(input, output) {
   })
   
   output$caption <- renderText({
-    paste("Dataset: ", input$variable)
+    paste("Dataset: ", input$select)
   })
   
   output$dcompPlot <- renderPlot({
