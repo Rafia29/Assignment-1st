@@ -5,13 +5,12 @@ library(shiny)
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel("Timeseries Forecasting"),
+  headerPanel("Time Series Forecasting"),
   
   # Sidebar with controls to select the dataset and forecast ahead duration
   sidebarPanel(
-    selectInput("variable", "Variable:",
-                list("Air Passengers" = "AirPassengers", 
-                     "Australian total wine sales" = "wineind",
+    selectInput("select", "Dataset:",
+                list("Australian total wine sales" = "wineind",
                      "Australian monthly gas production" = "gas")),
     numericInput("ahead", "Months to Forecast Ahead:", 12),
     
