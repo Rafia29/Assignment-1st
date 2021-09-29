@@ -6,10 +6,14 @@ Exponential smoothing is a rule of thumb technique for smoothing time series dat
 An autoregressive integrated moving average (ARIMA) model is a generalization of an autoregressive moving average (ARMA) model. Both of these models are fitted to time series data either to better understand the data or to predict future points in the series.
    ### Decomposition of Time Series
 This is an important technique for all types of time series analysis. It seeks to construct, from an observed time series, a number of component series (that could be used to reconstruct the original by additions or multiplications) where each of these has a certain characteristic or type of behavior. For example, time series are usually decomposed into:
-The trend component, which reflects the long-term progression of the series. A trend exists when there is a persistent increasing or decreasing direction in the data. The trend component does not have to be linear.
-The cyclical component, which reflects repeated but non-periodic fluctuations. The duration of these fluctuations depend on the nature of the time series.
-The seasonal component, reflecting seasonality (seasonal variation). A seasonal pattern exists when a time series is influenced by seasonal factors. Seasonality occurs over a fixed and known period (e.g., the quarter of the year, the month, or day of the week).
-The irregular component (or "noise"), which describes random, irregular influences. It represents the residuals or remainder of the time series after the other components have been removed.
+  ##### Trend component 
+It reflects the long-term progression of the series. A trend exists when there is a persistent increasing or decreasing direction in the data. The trend component does not have to be linear.
+##### Cyclical component
+It reflects repeated but non-periodic fluctuations. The duration of these fluctuations depend on the nature of the time series.
+##### Seasonal component
+It reflects seasonality (seasonal variation). A seasonal pattern exists when a time series is influenced by seasonal factors. Seasonality occurs over a fixed and known period (e.g., the quarter of the year, the month, or day of the week).
+##### Irregular component (or "noise")
+It is also describes random, irregular influences. It represents the residuals or remainder of the time series after the other components have been removed.
 # Loading Datasets
 Two sets of data have used for time series analysis. one is: Australian monthly gas production: 1956–1995.
 And other one is Australian total wine sales by wine makers in bottles <= 1 litre. Jan 1980 – Aug 1994.
